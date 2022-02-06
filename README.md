@@ -1,1 +1,6 @@
-# pacote_stringr
+# Pacote stringr
+
+## Curso R
+
+### Introdução
+
