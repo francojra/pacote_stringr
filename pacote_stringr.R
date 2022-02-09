@@ -93,3 +93,24 @@ s <- c("__SP__", "__MG__", "__RJ__")
 
 str_sub(s, 3, 4)
 ## [1] "SP" "MG" "RJ"
+
+# str_c
+# Análoga à função paste0() do R base, concatena strings em uma única string.
+
+string1 <- "O valor p é: "
+string2 <- 0.03
+
+str_c(string1, string2) 
+## [1] "O valor p é: 0.03"
+
+# Pode misturar objetos com strings definidas diretamente na função.
+
+string1 <- "Brigadeiro"
+string2 <- "bom"
+string3 <- "melhor"
+
+str_c(string1, " é a prova de que não existe nada tão ", string2,
+      " que não pode ficar ", string3, ".")
+## [1] "Brigadeiro é a prova de que não existe nada tão bom que não pode ficar melhor."
+
+# A função é vetorizada.
