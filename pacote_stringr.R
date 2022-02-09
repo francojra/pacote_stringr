@@ -114,3 +114,12 @@ str_c(string1, " é a prova de que não existe nada tão ", string2,
 ## [1] "Brigadeiro é a prova de que não existe nada tão bom que não pode ficar melhor."
 
 # A função é vetorizada.
+
+string1 <- c("Brigadeiro", "A política brasileira")
+string2 <- c("bom", "ruim")
+string3 <- c("melhor", "pior")
+
+str_c(string1, " é a prova de que não existe nada tão ", string2,
+      " que não pode ficar ", string3, ".")
+## [1] "Brigadeiro é a prova de que não existe nada tão bom que não pode ficar melhor."          
+## [2] "A política brasileira é a prova de que não existe nada tão ruim que não pode ficar pior."
