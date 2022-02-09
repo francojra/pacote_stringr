@@ -71,3 +71,25 @@ s <- c("01-Feminino", "02-Masculino", "03-Indefinido")
 # pegar do quarto até o último caractere, o primeiro caractere é o 0
 str_sub(s, start = 4) 
 ## [1] "Feminino"   "Masculino"  "Indefinido"
+
+# Também é possível obter apenas os números.
+
+str_sub(s, end = 2) 
+## [1] "01" "02" "03"
+
+# Em outros casos você precisa obter os últimos 2 caracteres.
+
+s <- c("Feminino-01", "Masculino-02", "Indefinido-03")
+
+str_sub(s, end = -4)
+## [1] "Feminino"   "Masculino"  "Indefinido"
+
+str_sub(s, start = -2)
+## [1] "01" "02" "03"
+
+# É possível usar os argumentos start e end conjuntamente.
+
+s <- c("__SP__", "__MG__", "__RJ__")
+
+str_sub(s, 3, 4)
+## [1] "SP" "MG" "RJ"
