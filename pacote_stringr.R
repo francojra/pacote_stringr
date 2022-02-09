@@ -123,3 +123,19 @@ str_c(string1, " é a prova de que não existe nada tão ", string2,
       " que não pode ficar ", string3, ".")
 ## [1] "Brigadeiro é a prova de que não existe nada tão bom que não pode ficar melhor."          
 ## [2] "A política brasileira é a prova de que não existe nada tão ruim que não pode ficar pior."
+
+# Expressões Regulares
+
+# Trabalhar com textos exige um certo conhecimento de expressões regulares. As expressões regulares —
+# ou simplesmente regex — permitem identificar conjuntos de caracteres, palavras e outros padrões 
+# por meio de uma sintaxe concisa.
+
+# amos estudar expressões regulares por meio de exemplos e da função str_detect(). 
+# Ela retorna TRUE se uma string atende a uma expressão regular e FALSE caso contrário. Por exemplo:
+
+str_detect("sao paulo", pattern = "paulo$")
+## [1] TRUE
+str_detect("sao paulo sp", pattern = "paulo$")
+## [1] FALSE
+
+# A regex/pattern “paulo$” indica que o texto deve ser terminado em “paulo”. 
