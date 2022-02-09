@@ -49,3 +49,25 @@ str_to_upper(s)
 
 str_to_title(s)
 ## [1] "Somos A Curso-R"
+
+s <- c("M", "F", "F", " M", " F ", "M")
+
+as.factor(s)
+## [1] M   F   F    M   F  M  
+## Levels:  F   M F Ms <- c("M", "F", "F", " M", " F ", "M")
+
+# A função str_trim() ajuda removendo os espaços excedentes antes e depois da string.
+
+string_aparada <- str_trim(s)
+
+as.factor(string_aparada)
+## [1] M F F M F M
+## Levels: F M
+
+s <- c("01-Feminino", "02-Masculino", "03-Indefinido")
+
+# Você pode querer apenas a parte final da string. Neste caso, pode usar a função str_sub().
+
+# pegar do quarto até o último caractere, o primeiro caractere é o 0
+str_sub(s, start = 4) 
+## [1] "Feminino"   "Masculino"  "Indefinido"
