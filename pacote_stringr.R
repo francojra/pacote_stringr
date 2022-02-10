@@ -174,3 +174,18 @@ str_replace(cidades, "S.", "São")
 ## [1] "São José do Rio Preto" "Sãoo Paulo"            "São José dos Campos"  
 ## [4] "Sãoo Roque"            "São S. da Grama"
 
+## Nesses casos, podemos usar a função fixed() para indicar que o padrão procurado não é uma regex:
+
+cidades <- c("S. José do Rio Preto", "São Paulo", "S. José dos Campos", "São Roque", "S. S. da Grama")
+
+str_replace(cidades, fixed("S."), "São")
+## [1] "São José do Rio Preto" "São Paulo"             "São José dos Campos"  
+## [4] "São Roque"             "São S. da Grama"
+
+## No exemplo abaixo, substituímos todas as ocorrências de . e - por um espaço.
+
+cpf <- c("303.030.111-33", "102-177-011-20", "987.220.199.00")
+
+str_replace_all(cpf, "[.-]", " ")
+## [1] "303 030 111 33" "102 177 011 20" "987 220 199 00"
+
