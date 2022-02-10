@@ -232,3 +232,7 @@ frases <- c('a roupa do rei', 'de roma', 'o rato roeu')
 str_subset(frases, 'd[eo]')
 ## [1] "a roupa do rei" "de roma"
 
+## É o mesmo que fazer subset usando a função str_detect.
+
+frases[str_detect(frases, "d[eo]")]
+## [1] "a roupa do rei" "de roma"
