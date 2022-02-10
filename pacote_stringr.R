@@ -203,3 +203,25 @@ sobrenomes
 ##  [7] "Kalibera"  "Lawrence"  "Leisch"    "Ligges"    NA
 
 ## str_split() e str_split_fixed(): Essas funções separam uma string em várias de acordo com um separador.
+
+texto <- 'Durante um longo período de tempo o "R" foi escrito "P" como no alfabeto cirílico. O seu nome no alfabeto fenício era "rech". Seu significado era o de uma cabeça, representada pela adaptação do hieróglifo egípcio de uma cabeça. Transformou-se no "rô" dos gregos. Os romanos modificaram o rô acrescentando um pequeno traço para diferenciá-lo do no nosso P.'
+
+str_split(texto, fixed('.'))
+## [[1]]
+## [1] "Durante um longo período de tempo o \"R\" foi escrito \"P\" como no alfabeto cirílico"                
+## [2] " O seu nome no alfabeto fenício era \"rech\""                                                         
+## [3] " Seu significado era o de uma cabeça, representada pela adaptação do hieróglifo egípcio de uma cabeça"
+## [4] " Transformou-se no \"rô\" dos gregos"                                                                 
+## [5] " Os romanos modificaram o rô acrescentando um pequeno traço para diferenciá-lo do no nosso P"         
+## [6] ""
+
+str_split_fixed(texto, fixed('.'), 3)
+##      [,1]                                                                                   
+## [1,] "Durante um longo período de tempo o \"R\" foi escrito \"P\" como no alfabeto cirílico"
+##      [,2]                                          
+## [1,] " O seu nome no alfabeto fenício era \"rech\""
+##      [,3]                                                                                                                                                                                                                                      
+## [1,] " Seu significado era o de uma cabeça, representada pela adaptação do hieróglifo egípcio de uma cabeça. 
+## Transformou-se no \"rô\" dos gregos. Os romanos modificaram o rô acrescentando um pequeno traço para 
+## diferenciá-lo do no nosso P."
+
