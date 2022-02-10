@@ -225,3 +225,10 @@ str_split_fixed(texto, fixed('.'), 3)
 ## Transformou-se no \"rô\" dos gregos. Os romanos modificaram o rô acrescentando um pequeno traço para 
 ## diferenciá-lo do no nosso P."
 
+## str_subset(): A função str_subset() retorna somente as strings compatíveis com a regex.
+
+frases <- c('a roupa do rei', 'de roma', 'o rato roeu')
+
+str_subset(frases, 'd[eo]')
+## [1] "a roupa do rei" "de roma"
+
