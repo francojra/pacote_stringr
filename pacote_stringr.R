@@ -159,3 +159,18 @@ str_detect("sao paulo sp", pattern = "paulo$")
 ## str_replace() e str_replace_all(): Substituem um padrão (ou todos) encontrado para um outro padrão.
 ## Substituindo apenas a primeira ocorrência.
 
+cidades <- c("S. José do Rio Preto", "São Paulo", "S. José dos Campos", "São Roque", "S. S. da Grama")
+
+str_replace(cidades, "S[.]", "São")
+## [1] "São José do Rio Preto" "São Paulo"             "São José dos Campos"  
+## [4] "São Roque"             "São S. da Grama"
+
+## Veja que no exemplo anterior precisamos colocar o . entre colchetes. Se não tivéssemos colocado, 
+## ele seria interpretado como uma regex e o padrão procurado seria “S” seguido de qualquer caracter:
+
+cidades <- c("S. José do Rio Preto", "São Paulo", "S. José dos Campos", "São Roque", "S. S. da Grama")
+
+str_replace(cidades, "S.", "São")
+## [1] "São José do Rio Preto" "Sãoo Paulo"            "São José dos Campos"  
+## [4] "Sãoo Roque"            "São S. da Grama"
+
