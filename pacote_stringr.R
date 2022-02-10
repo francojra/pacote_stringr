@@ -139,3 +139,23 @@ str_detect("sao paulo sp", pattern = "paulo$")
 ## [1] FALSE
 
 # A regex/pattern “paulo$” indica que o texto deve ser terminado em “paulo”. 
+
+# Funções que utilizam regex ---------------------------------------------------------------------------------------------------------------
+
+## Agora que já vimos as funções básicas do stringr e aprendemos um pouco de regex, vamos às funções 
+## mais avançadas. Basicamente, essas funções buscarão patterns em um vetor de strings e farão 
+## alguma coisa quando encontrá-lo.
+
+## str_detect(): Retorna TRUE se a regex é compatível com a string e FALSE caso contrário.
+
+library(stringr)
+
+str_detect("sao paulo", pattern = "paulo$")
+## [1] TRUE
+
+str_detect("sao paulo sp", pattern = "paulo$")
+## [1] FALSE
+
+## str_replace() e str_replace_all(): Substituem um padrão (ou todos) encontrado para um outro padrão.
+## Substituindo apenas a primeira ocorrência.
+
