@@ -20,3 +20,9 @@ Pensando nisso, Hadley Wickham deu aquela força para a comunidade R e criou o p
 
 - As funções de manipulação de texto começam com str_. Caso esqueça o nome de uma função, basta digitar stringr::str_ e apertar TAB para ver quais são as opções.
 - O primeiro argumento da função é sempre uma string ou um vetor de strings.
+
+### Etapas do script
+
+1. Carregar o pacote stringr;
+2. Funções básicas;
+3. Funções que utilizam regex.
