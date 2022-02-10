@@ -148,8 +148,6 @@ str_detect("sao paulo sp", pattern = "paulo$")
 
 ## str_detect(): Retorna TRUE se a regex é compatível com a string e FALSE caso contrário.
 
-library(stringr)
-
 str_detect("sao paulo", pattern = "paulo$")
 ## [1] TRUE
 
@@ -189,3 +187,19 @@ cpf <- c("303.030.111-33", "102-177-011-20", "987.220.199.00")
 str_replace_all(cpf, "[.-]", " ")
 ## [1] "303 030 111 33" "102 177 011 20" "987 220 199 00"
 
+## str_extract() e str_extract_all(): As funções str_extract() e str_extract_all() extraem padrões de uma string. 
+## No exemplo abaixo, pegamos apenas os sobrenomes de cada integrante do grupo.
+
+r_core_group <- c(
+  'Douglas Bates', 'John Chambers', 'Peter Dalgaard',
+  'Robert Gentleman', 'Kurt Hornik', 'Ross Ihaka', 'Tomas Kalibera',
+  'Michael Lawrence', 'Friedrich Leisch', 'Uwe Ligges', '...'
+)
+
+sobrenomes <- str_extract(r_core_group, '[:alpha:]+$')
+
+sobrenomes
+##  [1] "Bates"     "Chambers"  "Dalgaard"  "Gentleman" "Hornik"    "Ihaka"    
+##  [7] "Kalibera"  "Lawrence"  "Leisch"    "Ligges"    NA
+
+## str_split() e str_split_fixed(): Essas funções separam uma string em várias de acordo com um separador.
